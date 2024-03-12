@@ -136,7 +136,7 @@ const MarkHigherBMI = BMIMark > BMIJohn; // finds TRUE if the left value is high
 
 console.log("Marks BMI =", BMIMark, "Johns BMI =", BMIJohn); // slightly more verbose logging to show the infromation around the results
 console.log("Does Mark Have a Higher BMI than John? ", MarkHigherBMI);
-*/
+
 //------------------------------------------------------------------------------------------//
 
 const firstName = "Jonas";
@@ -161,3 +161,20 @@ console.log(`String
 on 
 Multiple 
 lines`);
+*/
+//------------------------------------------------------------------------------------------//
+// Taking Decisions: if/ else statements
+
+const age = 17;
+/* commented out below, more common way following
+const isOldEnough = (age) => 18;
+if (isOldEnough) {
+  // if the condition in the parenthesis is true, the code in the {} will be executed.
+  console.log("Sarah can start her Driving Licence");
+}*/
+if (age >= 18) {
+  console.log("Sarah can start her Driving Licence");
+} else {
+  const yearsLeft = 18 - age;
+  console.log(`Sarah cannot start her Driving Licence for ${yearsLeft} years`);
+}
