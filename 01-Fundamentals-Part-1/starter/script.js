@@ -124,17 +124,40 @@ TEST DATA: Marks weighs 78 kg and is 1.69 m tall. John weighs 92 kg and is 1.95 
 
  Write your code below. Good luck! 🙂 */
 /*
-const massMark = 78;
+const massMark = 78; // const is used by default
 const heightMark = 1.69;
 const massJohn = 92;
 const heightJohn = 1.95;
 
-const BMIMark = massMark / (heightMark * heightMark);
+const BMIMark = massMark / (heightMark * heightMark); // multiplication in brackets to ensure it happens first
 const BMIJohn = massJohn / (heightJohn * heightJohn);
 
-const MarkHigherBMI = BMIMark > BMIJohn;
+const MarkHigherBMI = BMIMark > BMIJohn; // finds TRUE if the left value is higher than the first
 
-console.log("Marks BMI =", BMIMark, "Johns BMI =", BMIJohn);
+console.log("Marks BMI =", BMIMark, "Johns BMI =", BMIJohn); // slightly more verbose logging to show the infromation around the results
 console.log("Does Mark Have a Higher BMI than John? ", MarkHigherBMI);
 */
 //------------------------------------------------------------------------------------------//
+
+const firstName = "Jonas";
+const job = "Teacher";
+const birthYear = 1991;
+const year = 2037;
+// concatenates below sting to output I'm Jonas, a 46 year old Teacher!
+const jonas =
+  "I'm " + firstName + ", a " + (year - birthYear) + " year old " + job + "!";
+console.log(jonas);
+// outputs same as above (I'm Jonas, a 46 year old Teacher!) using a string template
+const jonasNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
+console.log(jonasNew);
+// outputs a multi-line string comment
+console.log(
+  "string with \n\
+multiple \n\
+new lines"
+);
+// easier way to write multi-line strings
+console.log(`String
+on 
+Multiple 
+lines`);
