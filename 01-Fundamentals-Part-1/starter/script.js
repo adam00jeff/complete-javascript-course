@@ -58,4 +58,38 @@ age = 31;
 
 const birthYear = 1991;
 birthYear = 1992; // gives an error due to mutating a const
+
+//------------------------------------------------------------------------------------------//
+
+const now = 2024;
+// Math Operators
+const ageJonas = now - 1988;
+const ageSarah = now - 1978;
+console.log(ageJonas, ageSarah);
+
+console.log(ageJonas * 2, ageJonas / 10, 2 ** 3);
+
+const firstName = "Jonas";
+const lastName = "Schmedtmann";
+console.log(firstName + " " + lastName);
+
+// Assignment Operators
+let x = 10 + 5; // x = 15
+x += 10; // x = x + 10 = 25
+x *= 4; // x = x * 4 = 100
+x++; // x = x + 1 = 101
+x--; // x = x - 1 = 100
+x--; // x = x -1 = 99
+console.log(x);
+
+// Comparison Operators
+console.log(ageJonas > ageSarah); // >, <, >=, <=
+console.log(ageSarah > 18);
+
+const isFullAge = ageSarah >= 18; // saves as a BOOL true
+
+console.log(now - 1991 > now - 2018);
+
+//------------------------------------------------------------------------------------------//
+
 */
