@@ -273,7 +273,7 @@ if (height) {
 //----------------------------------------------------------------------------------------/
 /*
 //Equality Operators
-*/
+
 
 const age = 18;
 // Strict Equality
@@ -298,4 +298,33 @@ if (favourite === 23) {
   console.log(`7 is also fine`);
 } else {
   console.log(`Number is not in system`);
+}
+*/
+//----------------------------------------------------------------------------------------/
+/**/
+//Logical Operators
+
+const hasDriversLicense = true; //A
+const hasGoodVision = true; // B
+const hasNotGoodVision = false; // c
+
+console.log(hasDriversLicense && hasGoodVision); // result of true && true should be true
+console.log(hasDriversLicense && hasNotGoodVision); // should be false
+console.log(hasDriversLicense || hasNotGoodVision); // OR, should be true
+console.log(!hasDriversLicense || hasNotGoodVision); // ! not operator switches to false
+
+if (hasDriversLicense && hasGoodVision) {
+  console.log(`Sarah is able to drive`);
+} else {
+  console.log(`Someone else should drive`);
+}
+
+const isTired = true; // c
+console.log(hasDriversLicense && hasGoodVision && isTired); // true, none of these values are false
+
+// this will not be true if isTired is true
+if (hasDriversLicense && hasGoodVision && !isTired) {
+  console.log(`Sarah is able to drive`);
+} else {
+  console.log(`Someone else should drive`);
 }
