@@ -219,7 +219,21 @@ const MarkHigherBMI = BMIMark > BMIJohn;
 if (MarkHigherBMI) {
   console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`);
 } else {
-  console.log(`John's BMI (${BMIJohn}) is higher than Mark's ((${BMIMark}))!`);
+  console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})!`);
 }
 */
 //----------------------------------------------------------------------------------------/
+// Type Conversion and Coercion
+//Conversion
+const inputYear = "1991";
+console.log(inputYear + 18); // displays a concatenated string
+console.log(Number(inputYear) + 18); // converts to a number to give 2009
+
+//Coercion
+console.log("I am " + 23 + " Years old"); // + operator triggers a coercion to string
+console.log("23" - "10" - 3); // - operator coercion to a number
+console.log("23" * "2"); // * operator coercion to a number
+
+let n = "1" + 1; // makes string of 11
+n = n - 1; // makes 11 - 1 as a number
+console.log(n); // outputs 10 as a number
