@@ -22,8 +22,9 @@ let job1 = "programmer";
 let job2 = "teacher";
 
 // console.log(myFirstJob);
-
-//------------------------------------------------------------------------------------------//
+*/
+//-----------------------------------------------------------------------------------------//
+/*
 true;
 // set variable to a BOOL
 let jsIsFun = true;
@@ -51,15 +52,17 @@ console.log(typeof year);
 year = 1991;
 console.log(year);
 console.log(typeof year);
-//------------------------------------------------------------------------------------------//
-
+*/
+//------------------------------------------------------------------------------------------/
+/*
 let age = 30;
 age = 31;
 
 const birthYear = 1991;
 birthYear = 1992; // gives an error due to mutating a const
-
+*/
 //------------------------------------------------------------------------------------------//
+/*
 // Math Operators
 const now = 2024;
 const ageJonas = now - 1988;
@@ -88,10 +91,9 @@ console.log(ageSarah > 18);
 const isFullAge = ageSarah >= 18; // saves as a BOOL true
 
 console.log(now - 1991 > now - 2018);
-
+*/
 //------------------------------------------------------------------------------------------//
-
-
+/*
 const now = 2037;
 const ageJonas = now - 1991;
 const ageSarah = now - 2018;
@@ -107,7 +109,8 @@ console.log(ageJonas, ageSarah, averageAge);
 //------------------------------------------------------------------------------------------//
 
 //Coding Challenge 1
-/*CHALLENGE #1
+/*
+CHALLENGE #1
 Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula: BMI = mass / (height * height) (mass in kg and height in meters).
 
 Your task is to write some code to help them:
@@ -136,9 +139,9 @@ const MarkHigherBMI = BMIMark > BMIJohn; // finds TRUE if the left value is high
 
 console.log("Marks BMI =", BMIMark, "Johns BMI =", BMIJohn); // slightly more verbose logging to show the infromation around the results
 console.log("Does Mark Have a Higher BMI than John? ", MarkHigherBMI);
-
+*/
 //------------------------------------------------------------------------------------------//
-
+/*
 const firstName = "Jonas";
 const job = "Teacher";
 const birthYear = 1991;
@@ -223,6 +226,7 @@ if (MarkHigherBMI) {
 }
 */
 //----------------------------------------------------------------------------------------/
+/*
 // Type Conversion and Coercion
 //Conversion
 const inputYear = "1991";
@@ -237,3 +241,33 @@ console.log("23" * "2"); // * operator coercion to a number
 let n = "1" + 1; // makes string of 11
 n = n - 1; // makes 11 - 1 as a number
 console.log(n); // outputs 10 as a number
+*/
+//----------------------------------------------------------------------------------------/
+/* */
+//Truthy and Falsy Values
+// Falsy Values
+// 0, '', undefined, NULL, NaN
+// all other values are Truthy
+
+console.log(Boolean(0)); // false
+console.log(Boolean(undefined)); // false
+console.log(Boolean("Jonas")); // true
+console.log(Boolean({})); // true
+
+const money = 0; // 0 will return false
+if (money) {
+  // will check value, and try to convert it to BOOL
+  console.log(`Don't spend it all`); // Truthy Value returns here
+} else {
+  console.log(`Spent it all`); // Falsy Value returns here
+}
+
+let height; // undefined
+if (height) {
+  // undefined, aka a Falsy value
+  console.log(`Height is defined`);
+} else {
+  console.log(`Height is undefined`); // returns False
+}
+
+//----------------------------------------------------------------------------------------/
