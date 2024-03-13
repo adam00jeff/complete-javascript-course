@@ -243,7 +243,7 @@ n = n - 1; // makes 11 - 1 as a number
 console.log(n); // outputs 10 as a number
 */
 //----------------------------------------------------------------------------------------/
-/* */
+/* 
 //Truthy and Falsy Values
 // Falsy Values
 // 0, '', undefined, NULL, NaN
@@ -269,5 +269,33 @@ if (height) {
 } else {
   console.log(`Height is undefined`); // returns False
 }
-
+*/
 //----------------------------------------------------------------------------------------/
+/*
+//Equality Operators
+*/
+
+const age = 18;
+// Strict Equality
+if (age === 18) console.log("You just became an adult"); // single line if does not need {}
+// tripple =
+if (age === "18") console.log(`This should not be output, it is not equal`);
+// double =
+if (age == "18") console.log(`This should be output, it is a loose equal`);
+
+const favourite = Number(prompt(`What's your favourite number?`)); // wrapped to pass input to a number
+console.log(favourite);
+console.log(typeof favourite); // string
+
+// looking for a number, but a string will also work
+if (favourite == 23) {
+  console.log(`Cool Number`);
+}
+// looking for a number, will only accept a number
+if (favourite === 23) {
+  console.log(`Cool Number`);
+} else if (favourite == 7) {
+  console.log(`7 is also fine`);
+} else {
+  console.log(`Number is not in system`);
+}
