@@ -362,4 +362,55 @@ if (scoreDolphins > scoreKoalas) {
 }
 */
 //----------------------------------------------------------------------------------------/
+/* 
+
+// The Switch Statement
+const day = "wednesday";
+
+switch (
+  day // day === 'monday'
+) {
+  case "monday": //following the case and this colon, all lines are executed
+    console.log("Plan course structure");
+    console.log("Go to coding meetup");
+    break; // break ends execution in the case statment, without breaks it will continue executing
+  case "tuesday":
+    console.log("Prepare theory videos");
+    break;
+  case "wednesday":
+  case "thursday": // multiple cases can be stacked
+    console.log("Write code examples");
+    break;
+  case "friday":
+    console.log("Record Videos");
+    break;
+  case "saturday":
+  case "sunday":
+    console.log("Enjoy the weekend");
+    break;
+  default: // functions same as 'else' block
+    console.log("Not a valid weekday");
+}
+// replace the above with an IF statment:
+if (day === "monday") {
+  // strick comparison
+  console.log("Plan course structure");
+  console.log("Go to coding meetup");
+} else if (day === "tuesday") {
+  console.log("Prepare theory videos");
+} else if (day === "wednesday" || day === "thursday") {
+  // wed or thur
+  console.log("Write code examples");
+} else if (day === "friday") {
+  console.log("Record Videos");
+} else if (day === "saturday" || day === "sunday") {
+  // sat or sun
+  console.log("Enjoy the weekend");
+} else {
+  console.log("Not a valid weekday"); // error handling
+}
+*/
+//----------------------------------------------------------------------------------------/
+
+// Statements and Expressions
 /* */
