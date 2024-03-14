@@ -430,5 +430,33 @@ console.log(`I'm ${2037 - 1991} years old`); // expression in the template liter
 //}}`)
 */
 //----------------------------------------------------------------------------------------/
-/* */
+/* 
 // The Conditional (Ternary) Operator
+
+const age = 23;
+/*
+age >= 18 ? console.log("I like wine") : console.log("I like water"); // true
+age >= 30 // condition
+  ? console.log("I like wine a lot") // if
+  : console.log("I like water a lot"); // else (false)
+*/
+/*
+age >= 18 ? console.log("I like wine") : console.log("I like water");
+
+const drink = age >= 18 ? "wine" : " water"; // this returns a value, so it is an expression
+console.log(drink); // drink is now defined conditionally on a single line, without IF/ELSE
+
+let drink2; // must be defined outside of the block
+if (age >= 18) {
+  drink2 = "wine2"; // variable is reassinged inside of the block
+} else {
+  drink2 = "water2";
+}
+console.log(drink2);
+//using in a template literal
+//if statements cannot be used in a literal, but a ternary operator can
+
+console.log(`I like to drink ${age >= 18 ? "wine3" : " water3"}`); // as an expression, not a statement
+*/
+//----------------------------------------------------------------------------------------/
+/* 
