@@ -413,4 +413,22 @@ if (day === "monday") {
 //----------------------------------------------------------------------------------------/
 
 // Statements and Expressions
+/* 
+3 + 4; // expression
+1991; // expression
+true && false && !false; // expression
+
+if (23 > 10) {
+  // statement
+  const str = "23"; // the '23' is an expression, enclosed in a statement
+}
+
+console.log(`I'm ${2037 - 1991} years old`); // expression in the template literal
+
+//console.log(`I'm ${if (23>10){ // satement in the template literal
+//  const str = `23 is big`;      // will cause error 'unexpected token 'if'
+//}}`)
+*/
+//----------------------------------------------------------------------------------------/
 /* */
+// The Conditional (Ternary) Operator
