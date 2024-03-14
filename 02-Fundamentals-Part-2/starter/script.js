@@ -40,3 +40,23 @@ console.log(appleOrangeJuice);
 
 */
 //----------------------------------------------------------------------------------------/
+/*
+// Function Declarations vs. Expressions
+ */
+const age1 = calcAge1(1991); // function expressions can be called before they are declared
+// a function declaration
+function calcAge1(birthYear) {
+  return 2037 - birthYear; // no need to assign to a var if it is not used anywhere else
+}
+console.log(age1);
+
+//a function expression
+// expressions produce values
+const calcAge2 = function (birthYear) {
+  // calcAge2 is a expression, which holds a function that returns a value
+  // function with out a name 'anonaymous' function
+  return 2037 - birthYear;
+};
+const age2 = calcAge2(1991);
+
+console.log(age1, age2);
