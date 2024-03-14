@@ -42,7 +42,7 @@ console.log(appleOrangeJuice);
 //----------------------------------------------------------------------------------------/
 /*
 // Function Declarations vs. Expressions
- */
+
 const age1 = calcAge1(1991); // function expressions can be called before they are declared
 // a function declaration
 function calcAge1(birthYear) {
@@ -60,3 +60,29 @@ const calcAge2 = function (birthYear) {
 const age2 = calcAge2(1991);
 
 console.log(age1, age2);
+*/
+//----------------------------------------------------------------------------------------/
+/*
+
+// Arrow Functions
+
+// arrow function
+const calcAge3 = (birthYear) => 2037 - birthYear; // parameter for function within the brackers, the return is implicit
+const age3 = calcAge3(1991);
+console.log(age3); // 46
+
+const yearsUntilRetirement = (birthYear) => {
+  // curly braces are used to insert a multi line
+  const age = 2037 - birthYear;
+  const retirement = 65 - age;
+  return retirement; // return can only be omitted on a single line arrow function
+};
+*/
+const yearsUntilRetirement = (birthYear, firstName) => {
+  // curly braces are used to insert a multi line
+  const age = 2037 - birthYear;
+  const retirement = 65 - age;
+  return `${firstName} retires in ${retirement} years`; // return can only be omitted on a single line arrow function
+};
+console.log(yearsUntilRetirement(1991, "Jonas"));
+console.log(yearsUntilRetirement(1980, "Bob"));
