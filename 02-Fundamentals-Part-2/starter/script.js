@@ -77,7 +77,7 @@ const yearsUntilRetirement = (birthYear) => {
   const retirement = 65 - age;
   return retirement; // return can only be omitted on a single line arrow function
 };
-*/
+
 const yearsUntilRetirement = (birthYear, firstName) => {
   // curly braces are used to insert a multi line
   const age = 2037 - birthYear;
@@ -86,3 +86,38 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 };
 console.log(yearsUntilRetirement(1991, "Jonas"));
 console.log(yearsUntilRetirement(1980, "Bob"));
+*/
+//----------------------------------------------------------------------------------------/
+/*
+// Functions calling other Functions
+
+function cutFruitPieces(fruit) {
+  return fruit * 3; //4
+}
+
+function fruitProcessor(apples, oranges) {
+  const applePieces = cutFruitPieces(apples);
+  const orangePieces = cutFruitPieces(oranges);
+
+  const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange.`;
+  return juice;
+}
+console.log(fruitProcessor(2, 3));
+*/
+//----------------------------------------------------------------------------------------/
+/** */
+
+//Reviewing Functions
+
+const calcAge = function (birthYear) {
+  return 2037 - birthYear;
+};
+
+const yearsUntilRetirement = function (birthYear, firstName) {
+  const age = calcAge(birthYear);
+  const retirement = 65 - age;
+  // return retirement
+  return `${firstName} retires in ${retirement} years`;
+};
+
+console.log(yearsUntilRetirement(1991, "jonas"));
