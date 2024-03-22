@@ -1,4 +1,4 @@
-"use strict";
+"use strict"; /*
 
 // strict mode
 // all code from now onwards should have strict mode active
@@ -11,7 +11,7 @@ if (passTest) hadDriverLicence = true; // typo in variable to show strict mode, 
 if (hasDriversLicense) {
   console.log(`I can drive`); // without strict mode this shows no errors but also no results
 }
-*/
+*/ /*
 //----------------------------------------------------------------------------------------/
 /*
 //Functions
@@ -166,16 +166,24 @@ const scoreAvg = (score1, score2, score3) => (score1 + score2 + score3) / 3;
 //console.log(scoreAvg(1, 1, 1));
 
 // create and assign variables for the avgs
-// test data 1 
+// test data 1
 const scoreDolphins = scoreAvg(44, 23, 71);
-const scoreKoalas = scoreAvg(65,54,49);
+const scoreKoalas = scoreAvg(65, 54, 49);
+
+// test data 2
+const scoreDolphins2 = scoreAvg(85, 54, 41);
+const scoreKoalas2 = scoreAvg(23, 34, 27);
 
 // create a function checkWinner that takes the average score of each team as parameters (avgDolphins and avgKoalas), and then logs the winner to the console, together with the victory points, according to the rule above. Example: Koalas win (30 vs. 13) (use avgDolphins and avgKoalas instead of hard-coded values).
-const checkWinner = function(avgDolphins, avgKoalas){
-  if (avgDolphins => (avgKoalas*2)){
-    
+const checkWinner = function (avgDolphins, avgKoalas) {
+  if (avgDolphins >= avgKoalas * 2) {
+    console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+  } else if (avgKoalas >= avgDolphins * 2) {
+    console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+  } else {
+    console.log(`No Team Wins...(${avgDolphins} vs. ${avgKoalas})`);
   }
-}
-const yearsUntilRetirement = function (birthYear, firstName) {
-  const age = calcAge(birthYear);
-  const retirement = 65 - age;
+};
+console.log(checkWinner(scoreDolphins, scoreKoalas));
+console.log(checkWinner(scoreDolphins2, scoreKoalas2));
+*/
