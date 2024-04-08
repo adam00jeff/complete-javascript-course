@@ -103,7 +103,7 @@ function fruitProcessor(apples, oranges) {
   return juice;
 }
 console.log(fruitProcessor(2, 3));
-*/
+*/ /*
 //----------------------------------------------------------------------------------------/
 /*
 
@@ -231,7 +231,7 @@ length
 [[Prototype]]
 : 
 Array(0)
-*/ /*
+*/
 console.log(friends[0]); // Arrays are zero based, so this is the first value in the Array
 console.log(friends[1]);
 
@@ -333,7 +333,7 @@ BONUS: Create an array totals containing the total values, so the bill + tip.
 
 TEST DATA: 125, 555, and 44.
 */
-
+/*
 // 1: Write a function calcTip that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from the first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100.
 
 const calcTip = function (billValue) {
@@ -360,3 +360,21 @@ console.log(tips); // (3) [18.75, 111, 8.8]
 // 4: BONUS: Create an array totals containing the total values, so the bill + tip.
 const totals = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]];
 console.log(totals); // (3) [143.75, 666, 52.8]
+*/
+//----------------------------------------------------------------------------------------
+/*
+// INTRODUCTION TO OBJECTS
+
+const jonas = {
+  // curled braces used to define a new object
+  firstName: "Jonas", // values are assigned in a key:value formatt
+  lastName: "Schmedtman", // any data type can be used
+  age: 2037 - 1991, // calculations can be made in the declarations
+  job: "teacher",
+  friends: ["michael", "peter, steven"], // arrays can be submitted as values
+};
+
+*/
+//----------------------------------------------------------------------------------------
+
+// DOT vs BRACKET NOTATION
