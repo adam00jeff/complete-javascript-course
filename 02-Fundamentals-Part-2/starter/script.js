@@ -86,7 +86,7 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 };
 console.log(yearsUntilRetirement(1991, "Jonas"));
 console.log(yearsUntilRetirement(1980, "Bob"));
-*/
+*/ /*
 //----------------------------------------------------------------------------------------/
 /*
 // Functions calling other Functions
@@ -176,6 +176,7 @@ let scoreKoalas = scoreAvg(65, 54, 49);
 //const scoreKoalas2 = scoreAvg(23, 34, 27);
 
 // create a function checkWinner that takes the average score of each team as parameters (avgDolphins and avgKoalas), and then logs the winner to the console, together with the victory points, according to the rule above. Example: Koalas win (30 vs. 13) (use avgDolphins and avgKoalas instead of hard-coded values).
+
 const checkWinner = function (avgDolphins, avgKoalas) {
   if (avgDolphins >= avgKoalas * 2) {
     console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`); // call console.log inside the function
@@ -199,18 +200,20 @@ checkWinner(scoreDolphins, scoreKoalas);
 /*
   Introduction to Arrays
 
-*/
+
 // seperate variables
 const friend1 = "Michael";
 const friend2 = "Steven";
 const friend3 = "Peter";
+
 // an array of variables
 const friends = ["Michael", "Steven", "Peter"]; // This is the 'Literal' Array syntax
 console.log(friends);
 
-//Array can be declared by name also
-const example = new Array(1111, 2222, 3333, 4444); // This is the Array function directly
+//Array can be declared by name also this is the Array function directly
+const example = new Array(1111, 2222, 3333, 4444);
 
+*/
 /* How the array looks in the console log:
 (3) ['Michael', 'Steven', 'Peter']
 0
@@ -311,3 +314,49 @@ if (friends.includes("Steven")) {
 }
 */
 //----------------------------------------------------------------------------------------
+/*
+
+Coding Exercise: Challenge 2
+
+CHALLENGE #2
+Steven wants you to improve his tip calculator, using the same rules as before — tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
+
+Your tasks:
+
+Write a function calcTip that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from the first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100.
+
+And now let's use arrays! So, create an array called bills containing the test data below.
+
+Create an array called tips containing the tip value for each bill, calculated from the function you created before.
+
+BONUS: Create an array totals containing the total values, so the bill + tip.
+
+TEST DATA: 125, 555, and 44.
+*/
+
+// 1: Write a function calcTip that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from the first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100.
+
+const calcTip = function (billValue) {
+  const lowTip = billValue * 0.15;
+  const highTip = billValue * 0.2;
+
+  if (billValue >= 50 && billValue <= 300) {
+    return lowTip;
+  } else {
+    return highTip;
+  }
+};
+//console.log(calcTip(100)); //  15
+//console.log(calcTip(10)); // 2
+
+// 2: And now let's use arrays! So, create an array called bills containing the test data below.
+const bills = [125, 555, 44];
+console.log(bills); // (3) [125, 555, 44]
+
+// 3: Create an array called tips containing the tip value for each bill, calculated from the function you created before.
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+console.log(tips); // (3) [18.75, 111, 8.8]
+
+// 4: BONUS: Create an array totals containing the total values, so the bill + tip.
+const totals = [tips[0] + bills[0], tips[1] + bills[1], tips[2] + bills[2]];
+console.log(totals); // (3) [143.75, 666, 52.8]
