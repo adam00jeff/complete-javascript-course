@@ -231,7 +231,7 @@ length
 [[Prototype]]
 : 
 Array(0)
-*/
+
 console.log(friends[0]); // Arrays are zero based, so this is the first value in the Array
 console.log(friends[1]);
 
@@ -376,5 +376,79 @@ const jonas = {
 
 */
 //----------------------------------------------------------------------------------------
-
+/*
 // DOT vs BRACKET NOTATION
+const jonas = {
+  // curled braces used to define a new object
+  firstName: "Jonas", // values are assigned in a key:value formatt
+  lastName: "Schmedtman", // any data type can be used
+  age: 2037 - 1991, // calculations can be made in the declarations
+  job: "teacher",
+  friends: ["Michael", "Peter", "Steven"], // arrays can be submitted as values
+};
+console.log(jonas); // {firstName: 'Jonas', lastName: 'Schmedtman', age: 46, job: 'teacher', friends: Array(2)}
+
+// DOT NOTATIONS
+console.log(jonas.lastName); // Schmedtman
+
+// BRACKET NOTATIONS
+console.log(jonas["lastName"]); // Schmedtman
+
+// BRACKET NOTATIONS WITH CALCULATIONS
+const nameKey = "Name";
+console.log(jonas["first" + nameKey]); // JS objects compute the variable nameKey with the string 'first' to return the variable name 'fistName' and return the value // Jonas
+console.log(jonas["last" + nameKey]); // Schmedtman
+/*
+// Notations with USER PROMPT
+const interestedIn = prompt(
+  "What do you want to know about Jonas? Choose from 'firstName', 'lastName', 'age', 'job' and 'friends'"
+);
+//console.log(jonas.interestedIn); // returns as undefined, dot notation cannot be used in this was as 'insteretedIn' itself if not within the object so undefined is returned
+//console.log(jonas[interestedIn]); // returns 'teacher' when 'job' is entered, etc
+
+if (jonas[interestedIn]) {
+  // returns true if there is data returned and prints the below line
+  console.log(jonas[interestedIn]);
+} else {
+  console.log(
+    "Wrong request! Choose from 'firstName', 'lastName', 'age', 'job' and 'friends'"
+  );
+}
+
+// adding a k=>v (key => value) pair to the object
+jonas.location = "Portugal"; // adds the K=>V pair to the objectc using the DOT noation
+jonas["twitter"] = "@jonas";
+console.log(
+  jonas
+  ); 
+  
+  /*{firstName: 'Jonas', lastName: 'Schmedtman', age: 46, job: 'teacher', friends: Array(2), …}
+age: 46firstName: "Jonas"friends: (2) ['michael', 'peter, steven']job: "teacher"lastName: "Schmedtman"location: "Portugal"twitter: "@jonas"*/
+/*
+//Challenge
+// output "[Jonas] has [3] friends, and his best friend is called [Michael]" with values in square brackets calculated
+
+console.log(
+  `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`
+);
+*/
+//----------------------------------------------------------------------------------------
+
+//Object Methods
+
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Schmedtman",
+  brithYear: 1991,
+  job: "teacher",
+  friends: ["Michael", "Peter", "Steven"], // array value
+  hasDriversLiscence: true, // boolean value
+  // we can create a function with the Key instead of creating a variable
+  calcAge: function (birthYear) {
+    // function value
+    return 2037 - birthYear;
+  },
+};
+
+console.log(jonas.calcAge(1991)); // 46 // dot notation
+console.log(jonas["calcAge"](1991)); // 46 // bracket notation (method name needs to be submitted as a string)
